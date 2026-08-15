@@ -1,0 +1,1314 @@
+@charset "UTF-8";
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#10111a;
+    display:flex;
+    justify-content:center;
+    padding:25px;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:390px;
+    background:#ffffff;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+/* ===========================
+   CABEÇALHO
+=========================== */
+
+.topo{
+
+    background:#080c1d;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+
+}
+
+.logo img{
+
+    width:140px;
+
+}
+
+.empresa{
+
+    text-align:right;
+
+}
+
+.empresa h2{
+
+    font-size:30px;
+    font-weight:700;
+
+}
+
+.empresa p{
+
+    color:#bdbdbd;
+    font-size:13px;
+
+}
+
+/* ===========================
+   BANNER
+=========================== */
+
+.banner{
+
+    height:90px;
+    background:linear-gradient(90deg,#1a1f45,#7a2cff);
+    position:relative;
+
+}
+
+.banner::before{
+
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+    top:-170px;
+    left:-70px;
+
+}
+
+.banner::after{
+
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    background:rgba(255,255,255,.05);
+    border-radius:50%;
+    right:-80px;
+    bottom:-170px;
+
+}
+
+/* ===========================
+   PERFIL
+=========================== */
+
+.perfil{
+
+    margin-top:-55px;
+    text-align:center;
+    padding:0 25px 20px;
+
+}
+
+.foto{
+
+    width:155px;
+    height:155px;
+    border-radius:50%;
+    border:6px solid white;
+    object-fit:cover;
+    background:white;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+}
+
+.perfil h1{
+
+    margin-top:18px;
+    font-size:36px;
+    color:#222;
+
+}
+
+.perfil h3{
+
+    color:#7a2cff;
+    margin-top:8px;
+    font-weight:600;
+
+}
+
+.matricula{
+
+    display:inline-block;
+    margin-top:18px;
+    background:#272344;
+    color:white;
+    padding:10px 28px;
+    border-radius:40px;
+    font-size:17px;
+
+}
+
+/* ===========================
+   CARD DADOS
+=========================== */
+
+.card{
+
+    width:90%;
+    margin:30px auto;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    overflow:hidden;
+
+}
+
+.linha{
+
+    display:flex;
+    align-items:center;
+    padding:18px 20px;
+    border-bottom:1px solid #ececec;
+
+}
+
+.linha:last-child{
+
+    border:none;
+
+}
+
+.linha i{
+
+    width:42px;
+    color:#7a2cff;
+    font-size:20px;
+
+}
+
+.linha span{
+
+    width:120px;
+    font-weight:600;
+    color:#333;
+
+}
+
+.linha b{
+
+    color:#555;
+    font-weight:500;
+
+}
+
+/* ===========================
+   TÍTULOS
+=========================== */
+
+.titulo{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:0 22px 15px;
+
+}
+
+.titulo i{
+
+    color:#7a2cff;
+    font-size:22px;
+
+}
+
+.titulo h2{
+
+    color:#222;
+    font-size:22px;
+
+}
+
+
+
+/* =========================================
+   CERTIFICADOS
+========================================= */
+
+.certificados-section{
+
+    width:90%;
+
+    margin:35px auto 25px;
+
+}
+
+
+/* CABEÇALHO */
+
+.titulo-certificados{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-bottom:22px;
+
+}
+
+
+.titulo-certificado-esquerda{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.titulo-certificado-esquerda > i{
+
+    color:#7a2cff;
+
+    font-size:24px;
+
+}
+
+
+.titulo-certificado-esquerda h2{
+
+    margin:0;
+
+    color:#222;
+
+    font-size:22px;
+
+}
+
+
+.titulo-certificado-esquerda p{
+
+    margin-top:4px;
+
+    color:#888;
+
+    font-size:12px;
+
+}
+
+
+/* BOTÃO ADICIONAR */
+
+.btn-adicionar-certificado{
+
+    border:none;
+
+    background:#7028d9;
+
+    color:white;
+
+    padding:10px 14px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    font-size:13px;
+
+    transition:.2s;
+
+}
+
+
+.btn-adicionar-certificado:hover{
+
+    background:#5d1fb9;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =========================================
+   LISTA
+========================================= */
+
+.lista-certificados{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+/* =========================================
+   CARD DO CERTIFICADO
+========================================= */
+
+.certificado-card{
+
+    background:#fff;
+
+    border:1px solid #e8e8e8;
+
+    border-radius:16px;
+
+    padding:17px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    box-shadow:0 5px 16px rgba(0,0,0,.07);
+
+    transition:.2s;
+
+}
+
+
+.certificado-card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 22px rgba(0,0,0,.11);
+
+}
+
+
+/* ÍCONE PDF */
+
+.certificado-icone{
+
+    width:48px;
+
+    height:48px;
+
+    min-width:48px;
+
+    border-radius:12px;
+
+    background:#f0e7ff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.certificado-icone i{
+
+    color:#7028d9;
+
+    font-size:22px;
+
+}
+
+
+/* INFORMAÇÕES */
+
+.certificado-info{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+
+.certificado-info h3{
+
+    color:#222;
+
+    font-size:15px;
+
+    margin-bottom:5px;
+
+}
+
+
+.certificado-info p{
+
+    color:#666;
+
+    font-size:12px;
+
+    margin-bottom:6px;
+
+}
+
+
+.certificado-validade{
+
+    color:#777;
+
+    font-size:11px;
+
+}
+
+
+/* STATUS */
+
+.status-certificado{
+
+    display:inline-block;
+
+    margin-top:6px;
+
+    padding:4px 8px;
+
+    border-radius:20px;
+
+    font-size:10px;
+
+    font-weight:600;
+
+}
+
+
+.status-valido{
+
+    background:#e5f8ed;
+
+    color:#159447;
+
+}
+
+
+.status-vencendo{
+
+    background:#fff3dc;
+
+    color:#c47b00;
+
+}
+
+
+.status-vencido{
+
+    background:#ffe6e6;
+
+    color:#d33;
+
+}
+
+
+/* =========================================
+   BOTÃO PDF
+========================================= */
+
+.btn-abrir-pdf{
+
+    width:42px;
+
+    height:42px;
+
+    min-width:42px;
+
+    border:1px solid #7028d9;
+
+    background:white;
+
+    color:#7028d9;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:17px;
+
+    transition:.2s;
+
+}
+
+
+.btn-abrir-pdf:hover{
+
+    background:#7028d9;
+
+    color:white;
+
+}
+
+
+/* =========================================
+   BOTÃO EXCLUIR
+========================================= */
+
+.btn-excluir-certificado{
+
+    width:35px;
+
+    height:35px;
+
+    border:none;
+
+    background:#fff0f0;
+
+    color:#d33;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================================
+   SEM CERTIFICADOS
+========================================= */
+
+.sem-certificados{
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    border:2px dashed #ddd;
+
+    border-radius:16px;
+
+    color:#888;
+
+}
+
+
+.sem-certificados i{
+
+    font-size:38px;
+
+    color:#7028d9;
+
+    margin-bottom:12px;
+
+}
+
+
+.sem-certificados h3{
+
+    color:#444;
+
+    font-size:16px;
+
+    margin-bottom:7px;
+
+}
+
+
+.sem-certificados p{
+
+    font-size:12px;
+
+    line-height:1.5;
+
+    margin-bottom:18px;
+
+}
+
+
+.sem-certificados button{
+
+    border:none;
+
+    background:#7028d9;
+
+    color:white;
+
+    padding:10px 16px;
+
+    border-radius:9px;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal-certificado{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    z-index:9999;
+
+}
+
+
+.modal-certificado.ativo{
+
+    display:flex;
+
+}
+
+
+/* CONTEÚDO */
+
+.modal-conteudo{
+
+    width:100%;
+
+    max-width:390px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+
+    animation:abrirModal .25s ease;
+
+}
+
+
+@keyframes abrirModal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px) scale(.97);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* TOPO */
+
+.modal-topo{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:22px;
+
+}
+
+
+.modal-topo h2{
+
+    color:#222;
+
+    font-size:20px;
+
+}
+
+
+.modal-topo p{
+
+    color:#888;
+
+    font-size:12px;
+
+    margin-top:4px;
+
+}
+
+
+.fechar-modal{
+
+    width:34px;
+
+    height:34px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#f2f2f2;
+
+    color:#555;
+
+    cursor:pointer;
+
+}
+
+
+/* CAMPOS */
+
+.campo{
+
+    margin-bottom:17px;
+
+}
+
+
+.campo label{
+
+    display:block;
+
+    color:#444;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:7px;
+
+}
+
+
+.campo input[type="text"],
+.campo input[type="date"]{
+
+    width:100%;
+
+    height:43px;
+
+    border:1px solid #ddd;
+
+    border-radius:9px;
+
+    padding:0 12px;
+
+    outline:none;
+
+    font-size:13px;
+
+}
+
+
+.campo input:focus{
+
+    border-color:#7028d9;
+
+}
+
+
+/* UPLOAD */
+
+.upload-pdf{
+
+    border:2px dashed #d8c7f5;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    background:#faf8ff;
+
+    display:flex !important;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:7px;
+
+}
+
+
+.upload-pdf i{
+
+    font-size:30px;
+
+    color:#7028d9;
+
+}
+
+
+.upload-pdf strong{
+
+    color:#555;
+
+}
+
+
+.upload-pdf span{
+
+    color:#999;
+
+    font-size:11px;
+
+}
+
+
+/* BOTÕES MODAL */
+
+.modal-botoes{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+
+.btn-cancelar{
+
+    flex:1;
+
+    border:1px solid #ddd;
+
+    background:white;
+
+    color:#555;
+
+    padding:12px;
+
+    border-radius:9px;
+
+    cursor:pointer;
+
+}
+
+
+.btn-salvar-certificado{
+
+    flex:2;
+
+    border:none;
+
+    background:#7028d9;
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:9px;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:430px){
+
+    .titulo-certificados{
+
+        align-items:flex-start;
+
+    }
+
+
+    .btn-adicionar-certificado{
+
+        padding:9px;
+
+        font-size:0;
+
+    }
+
+
+    .btn-adicionar-certificado i{
+
+        font-size:15px;
+
+    }
+
+
+    .certificado-card{
+
+        padding:13px;
+
+    }
+
+
+    .certificado-icone{
+
+        width:42px;
+
+        height:42px;
+
+        min-width:42px;
+
+    }
+
+
+    .certificado-info h3{
+
+        font-size:14px;
+
+    }
+
+
+    .certificado-info p{
+
+        font-size:11px;
+
+    }
+
+}
+
+
+/* =========================================
+   ÁREA DE CONTATOS
+========================================= */
+
+.contatos-section{
+
+    width:90%;
+
+    margin:38px auto 30px;
+
+}
+
+
+/* TÍTULO */
+
+.titulo-contatos{
+
+    margin-bottom:20px;
+
+}
+
+
+.titulo-contatos-esquerda{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.titulo-contatos-esquerda > i{
+
+    color:#7028d9;
+
+    font-size:23px;
+
+}
+
+
+.titulo-contatos-esquerda h2{
+
+    margin:0;
+
+    color:#222;
+
+    font-size:22px;
+
+}
+
+
+.titulo-contatos-esquerda p{
+
+    margin-top:4px;
+
+    color:#888;
+
+    font-size:12px;
+
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.contatos-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:12px;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.contato-card{
+
+    text-decoration:none;
+
+    background:#fff;
+
+    border:1px solid #e7e7e7;
+
+    border-radius:16px;
+
+    padding:15px 8px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    min-height:125px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.07);
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+
+}
+
+
+/* EFEITO */
+
+.contato-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 10px 22px
+        rgba(0,0,0,.12);
+
+}
+
+
+.contato-card:active{
+
+    transform:scale(.96);
+
+}
+
+
+/* =========================================
+   ÍCONE
+========================================= */
+
+.contato-icone{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:10px;
+
+}
+
+
+.contato-icone i{
+
+    font-size:25px;
+
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+.contato-card.whatsapp
+ .contato-icone{
+
+    background:#e6f8ed;
+
+}
+
+
+.contato-card.whatsapp
+.contato-icone i{
+
+    color:#20b85a;
+
+}
+
+
+/* =========================================
+   TELEFONE
+========================================= */
+
+.contato-card.telefone
+.contato-icone{
+
+    background:#e8f0ff;
+
+}
+
+
+.contato-card.telefone
+.contato-icone i{
+
+    color:#2878d8;
+
+}
+
+
+/* =========================================
+   EMAIL
+========================================= */
+
+.contato-card.email
+.contato-icone{
+
+    background:#eee9ff;
+
+}
+
+
+.contato-card.email
+.contato-icone i{
+
+    color:#7028d9;
+
+}
+
+
+/* =========================================
+   LOCALIZAÇÃO
+========================================= */
+
+.contato-card.localizacao
+.contato-icone{
+
+    background:#ffe9ed;
+
+}
+
+
+.contato-card.localizacao
+.contato-icone i{
+
+    color:#e5485d;
+
+}
+
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.contato-card span{
+
+    color:#333;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+
+.contato-card small{
+
+    color:#999;
+
+    font-size:9px;
+
+    margin-top:4px;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:430px){
+
+    .contatos-grid{
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:12px;
+
+    }
+
+
+    .contato-card{
+
+        min-height:115px;
+
+    }
+
+}
+
+.rodape-texto{
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}

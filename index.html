@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+</head>
+<body>
+    
+    
+<div class="container">
+
+    <!-- CABEÇALHO -->
+
+    <header class="topo">
+
+        <div class="logo">
+
+            <img src="imagens/img-reparo.png.png">
+
+        </div>
+
+        <div class="empresa">
+
+            <h2>SMART ID</h2>
+
+            <p>Identidade Inteligente</p>
+
+        </div>
+
+    </header>
+
+    <!-- BANNER -->
+
+    <section class="banner">
+
+        <div class="efeito"></div>
+
+    </section>
+
+    <!-- FOTO -->
+
+    <section class="perfil">
+
+        <img src="imagens/IMG_vitorsantos.JPG" class="foto">
+
+        <h1>João Vitor dos Santos</h1>
+
+        <h3>Técnico em Manutenção</h3>
+
+        <span class="matricula">
+            Matrícula: 0001
+        </span>
+
+    </section>
+
+    <!-- DADOS -->
+
+    <section class="card">
+
+        <div class="linha">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <span>Departamento</span>
+
+            <b>Manutenção</b>
+
+        </div>
+
+        <div class="linha">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <span>Ramal</span>
+
+            <b>1234</b>
+
+        </div>
+
+        <div class="linha">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>E-mail</span>
+
+            <b>joao@empresa.com.br</b>
+
+        </div>
+
+        <div class="linha">
+
+            <i class="fa-solid fa-calendar"></i>
+
+            <span>Admissão</span>
+
+            <b>15/03/2023</b>
+
+        </div>
+
+    </section>
+
+<!-- =====================================
+     CERTIFICADOS
+===================================== -->
+
+<section class="certificados-section">
+
+    <div class="titulo-certificados">
+
+        <div class="titulo-certificado-esquerda">
+
+            <i class="fa-solid fa-file-shield"></i>
+
+            <div>
+                <h2>Certificados</h2>
+                <p>Documentos e treinamentos do funcionário</p>
+            </div>
+
+        </div>
+
+        <button
+            class="btn-adicionar-certificado"
+            id="btnAbrirCertificado">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Adicionar
+
+        </button>
+
+    </div>
+
+
+    <!-- LISTA DOS CERTIFICADOS -->
+
+    <div
+        class="lista-certificados"
+        id="listaCertificados">
+
+        <!--
+            Os certificados serão
+            adicionados automaticamente
+            pelo JavaScript.
+        -->
+
+    </div>
+
+
+    <!-- MENSAGEM QUANDO NÃO EXISTIR CERTIFICADO -->
+
+    <div
+        class="sem-certificados"
+        id="semCertificados">
+
+        <i class="fa-regular fa-file-pdf"></i>
+
+        <h3>Nenhum certificado cadastrado</h3>
+
+        <p>
+            Adicione um certificado em formato PDF
+            para que ele apareça aqui.
+        </p>
+
+        <button
+            onclick="abrirFormularioCertificado()">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Adicionar primeiro certificado
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     MODAL - ADICIONAR CERTIFICADO
+===================================== -->
+
+<div
+    class="modal-certificado"
+    id="modalCertificado">
+
+    <div class="modal-conteudo">
+
+        <div class="modal-topo">
+
+            <div>
+
+                <h2>Adicionar certificado</h2>
+
+                <p>
+                    Cadastre o certificado do funcionário
+                </p>
+
+            </div>
+
+            <button
+                class="fechar-modal"
+                id="fecharModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <form id="formCertificado">
+
+            <!-- NOME -->
+
+            <div class="campo">
+
+                <label for="nomeCertificado">
+
+                    Nome do certificado
+
+                </label>
+
+                <input
+                    type="text"
+                    id="nomeCertificado"
+                    placeholder="Ex.: NR-10"
+                    required>
+
+            </div>
+
+
+            <!-- DESCRIÇÃO -->
+
+            <div class="campo">
+
+                <label for="descricaoCertificado">
+
+                    Descrição
+
+                </label>
+
+                <input
+                    type="text"
+                    id="descricaoCertificado"
+                    placeholder="Ex.: Segurança em Instalações Elétricas"
+                    required>
+
+            </div>
+
+
+            <!-- VALIDADE -->
+
+            <div class="campo">
+
+                <label for="validadeCertificado">
+
+                    Data de validade
+
+                </label>
+
+                <input
+                    type="date"
+                    id="validadeCertificado"
+                    required>
+
+            </div>
+
+
+            <!-- PDF -->
+
+            <div class="campo">
+
+                <label>
+
+                    Arquivo PDF
+
+                </label>
+
+                <label
+                    class="upload-pdf"
+                    for="arquivoCertificado">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    <strong>
+                        Escolher certificado
+                    </strong>
+
+                    <span id="nomeArquivo">
+                        Apenas arquivos PDF
+                    </span>
+
+                </label>
+
+                <input
+                    type="file"
+                    id="arquivoCertificado"
+                    accept="application/pdf"
+                    hidden
+                    required>
+
+            </div>
+
+
+            <!-- BOTÕES -->
+
+            <div class="modal-botoes">
+
+                <button
+                    type="button"
+                    class="btn-cancelar"
+                    id="cancelarCertificado">
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn-salvar-certificado">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Adicionar certificado
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+   
+<!-- =====================================
+     CONTATOS
+===================================== -->
+
+<section class="contatos-section">
+
+    <div class="titulo-contatos">
+
+        <div class="titulo-contatos-esquerda">
+
+            <i class="fa-solid fa-address-book"></i>
+
+            <div>
+
+                <h2>Contatos</h2>
+
+                <p>Entre em contato com este funcionário</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="contatos-grid">
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            class="contato-card whatsapp">
+
+            <div class="contato-icone">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </div>
+
+            <span>WhatsApp</span>
+
+            <small>Enviar mensagem</small>
+
+        </a>
+
+
+        <!-- TELEFONE -->
+
+        <a
+            href="tel:+5511999999999"
+            class="contato-card telefone">
+
+            <div class="contato-icone">
+
+                <i class="fa-solid fa-phone"></i>
+
+            </div>
+
+            <span>Ligar</span>
+
+            <small>(11) 99999-9999</small>
+
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+            href="mailto:joao@empresa.com.br"
+            class="contato-card email">
+
+            <div class="contato-icone">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </div>
+
+            <span>E-mail</span>
+
+            <small>Enviar e-mail</small>
+
+        </a>
+
+
+        <!-- LOCALIZAÇÃO -->
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=São Paulo,SP"
+            target="_blank"
+            class="contato-card localizacao">
+
+            <div class="contato-icone">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+            </div>
+
+            <span>Localização</span>
+
+            <small>Ver no mapa</small>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+<div class="rodape-texto">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        
+
+            <strong>ID verificado com tecnologia NFC</strong>
+
+            <p>REPARO SMART • IDENTIDADE INTELIGENTE</p>
+
+        </div>
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
